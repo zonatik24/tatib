@@ -1,18 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peraturan Sekolah: Etika Penggunaan AI & Ketidakhadiran</title>
+    <title>Regulasi Baru & Evaluasi Pembinaan - SMP Santa Angela</title>
     <style>
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #18bc9c;
             --danger-color: #e74c3c;
             --warning-color: #f39c12;
-            --bg-color: #f8f9fa;
+            --bg-color: #f4f6f9;
             --text-color: #333333;
             --card-bg: #ffffff;
+            --navbar-height: 60px;
+        }
+
+        /* Smooth scroll efek saat menu navigasi diklik */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--navbar-height) + 20px);
         }
 
         * {
@@ -26,101 +34,192 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
-            padding: 20px;
+            padding-top: calc(var(--navbar-height) + 20px); /* Jarak agar konten tidak tertutup navbar */
+            padding-bottom: 40px;
         }
 
+        /* --- STYLING MENU NAVIGASI (NAVBAR) --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--navbar-height);
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .nav-logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+        }
+
+        /* --- STYLING KONTEN --- */
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0 20px;
         }
 
         header {
             text-align: center;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), #34495e);
+            color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 8px;
             margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            color: var(--primary-color);
-            font-size: 24px;
-            margin-bottom: 10px;
+        header h1 {
+            font-size: 26px;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
         }
 
-        .school-name {
-            font-weight: bold;
-            color: var(--secondary-color);
-            font-size: 18px;
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
         }
 
-        .meta-info {
-            background-color: #eef2f7;
-            padding: 15px;
-            border-left: 5px solid var(--primary-color);
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             margin-bottom: 30px;
-            font-size: 14px;
-            border-radius: 0 4px 4px 0;
         }
 
         h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 8px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 20px;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 22px;
         }
 
         h3 {
-            font-size: 16px;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: var(--primary-color);
         }
 
-        .allowed-title { color: var(--secondary-color); }
-        .forbidden-title { color: var(--danger-color); }
+        .sub-title-allowed { color: var(--secondary-color); font-weight: bold; }
+        .sub-title-forbidden { color: var(--danger-color); font-weight: bold; }
+        .sub-title-eval-up { color: #27ae60; font-weight: bold; }
+        .sub-title-eval-down { color: #d35400; font-weight: bold; }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .meta-info {
+            background-color: #eef2f7;
+            padding: 15px 20px;
+            border-left: 5px solid var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 15px;
+            border-radius: 0 6px 6px 0;
+        }
 
         ul, ol {
-            margin-left: 20px;
+            margin-left: 25px;
             margin-bottom: 20px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        strong {
-            color: #000;
+        li strong {
+            color: #111;
         }
 
         .alert-box {
             background-color: #fdf2f2;
             border: 1px solid #f5c6cb;
             color: #721c24;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
+            padding: 18px;
+            border-radius: 6px;
+            margin-top: 25px;
             font-weight: 500;
         }
 
         .consequence-box {
             background-color: #fff3cd;
             border-left: 5px solid var(--warning-color);
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 0 4px 4px 0;
+            padding: 18px;
+            margin-top: 20px;
+            border-radius: 0 6px 6px 0;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
+        .eval-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .eval-column {
+            background: #fdfdfd;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #eef0f3;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 15px;
             }
-            h1 {
+            .nav-logo {
+                font-size: 13px;
+            }
+            .nav-links {
+                gap: 5px;
+            }
+            .nav-links a {
+                font-size: 11px;
+                padding: 6px 8px;
+            }
+            .eval-grid {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 25px;
+            }
+            header h1 {
                 font-size: 20px;
             }
         }
@@ -128,72 +227,115 @@
 </head>
 <body>
 
+    <nav class="navbar">
+        <a href ="index.html"><div class="nav-logo">SMP Santa Angela</div></a>
+        <ul class="nav-links">
+            <li><a href="#etika-ai">Etika AI</a></li>
+            <li><a href="#ketidakhadiran">Ketidakhadiran</a></li>
+            <li><a href="#evaluasi-tatib">Evaluasi Tatib</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
+        
         <header>
-            <h1>Peraturan & Pemanfaatan Teknologi</h1>
-            <p class="school-name">SMP Santa Angela</p>
+            <h1>Dokumen Regulasi & Evaluasi Sekolah</h1>
+            <p>Sistem Informasi Internal Tata Tertib</p>
         </header>
 
-        <section>
-            <h2>Etika Penggunaan AI (Artificial Intelligence) [cite: 1]</h2>
+        <div class="card" id="etika-ai">
+            <h2>I. Etika Penggunaan AI (Artificial Intelligence)</h2>
             
             <div class="meta-info">
-                Kebijakan penggunaan AI dalam pendidikan di Indonesia diatur melalui SKB 7 Menteri. [cite: 2] Aturan ini membatasi penggunaan chatbot AI instan (seperti ChatGPT) untuk siswa SD hingga SMA, demi menjaga perkembangan kognitif dan karakter anak. [cite: 3] Namun, AI edukatif yang dirancang khusus tetap didukung sebagai alat bantu murid dan sarana belajar. [cite: 4] Untuk itu, SMP Santa Angela memberlakukan peraturan dalam pemanfaatan Kecerdasan Artifisial (AI) dalam proses pembelajaran. [cite: 5]
+                Kebijakan penggunaan AI dalam pendidikan di Indonesia diatur melalui SKB 7 Menteri. Aturan ini membatasi penggunaan chatbot AI instan (seperti ChatGPT) untuk siswa SD hingga SMA, demi menjaga perkembangan kognitif dan karakter anak. Namun, AI edukatif yang dirancang khusus tetap didukung sebagai alat bantu murid dan sarana belajar. Untuk itu SMP Santa Angela memberlakukan peraturan dalam pemanfaatan Kecerdasan Artifisial (AI) dalam proses pembelajaran. Berikut beberapa poin yang harus diperhatikan dalam menggunakan AI.
             </div>
 
-            <p>Berikut beberapa poin yang harus diperhatikan dalam menggunakan AI: [cite: 6]</p>
-
-            <h3 class="allowed-title">Pemanfaatan AI yang Diperbolehkan [cite: 7]</h3>
-            <p>Murid <strong>SANGAT DIREKOMENDASIKAN</strong> menggunakan AI untuk hal-hal yang mendukung peningkatan pemahaman akademik, antara lain: [cite: 8]</p>
+            <h3 class="sub-title-allowed">Pemanfaatan AI yang Diperbolehkan</h3>
+            <p>Murid <strong>SANGAT DIREKOMENDASIKAN</strong> menggunakan AI untuk hal-hal yang mendukung peningkatan pemahaman akademik, antara lain:</p>
             <ul>
-                <li><strong>Asisten Pemahaman Materi:</strong> Meminta AI menjelaskan ulang konsep materi yang sulit (misal: rumus fisika, struktur tata bahasa) dengan bahasa yang lebih sederhana. [cite: 9]</li>
-                <li><strong>Teman Diskusi & Curah Pendapat (Brainstorming):</strong> Mencari ide, sudut pandang baru, atau kerangka awal untuk proyek, esai, dan karya kreatif. [cite: 10]</li>
-                <li><strong>Penyedia Sumber Belajar:</strong> Meminta rekomendasi buku, artikel ilmiah, atau video edukasi yang relevan dengan topik pembelajaran. [cite: 11]</li>
-                <li><strong>Latihan Soal Mandiri:</strong> Meminta AI membuatkan simulasi soal kuis atau memberikan umpan balik (feedback) atas draf tulisan mandiri murid. [cite: 12]</li>
+                <li><strong>Asisten Pemahaman Materi:</strong> Meminta AI menjelaskan ulang konsep materi yang sulit (misal: rumus fisika, struktur tata bahasa) dengan bahasa yang lebih sederhana.</li>
+                <li><strong>Teman Diskusi & Curah Pendapat (Brainstorming):</strong> Mencari ide, sudut pandang baru, atau kerangka awal untuk proyek, esai, dan karya kreatif.</li>
+                <li><strong>Penyedia Sumber Belajar:</strong> Meminta rekomendasi buku, artikel ilmiah, atau video edukasi yang relevan dengan topik pembelajaran.</li>
+                <li><strong>Latihan Soal Mandiri:</strong> Meminta AI membuatkan simulasi soal kuis atau memberikan umpan balik (feedback) atas draf tulisan mandiri murid.</li>
             </ul>
 
-            <h3 class="forbidden-title">Larangan Penggunaan AI untuk Kecurangan Akademik [cite: 13]</h3>
-            <p>Murid <strong>DILARANG KERAS</strong> menggunakan AI untuk memotong kompas proses belajar, meliputi: [cite: 14]</p>
+            <h3 class="sub-title-forbidden">Larangan Penggunaan AI untuk Kecurangan Akademik</h3>
+            <p>Murid <strong>DILARANG KERAS</strong> menggunakan AI untuk memotong kompas proses belajar, meliputi:</p>
             <ul>
-                <li><strong>Plagiarisme Total (Copy-Paste):</strong> Menyalin mentah-mentah jawaban dari AI (seperti ChatGPT, Gemini, dll.) untuk mengerjakan PR, esai, atau tugas sekolah tanpa adanya proses analisis dan penulisan ulang oleh diri sendiri. [cite: 15]</li>
-                <li><strong>Kecurangan Ujian/Kuis:</strong> Mengaktifkan atau mengakses AI dalam bentuk apa pun selama ujian, ulangan harian, atau kuis berlangsung, kecuali atas instruksi guru yang bersangkutan. [cite: 16]</li>
-                <li><strong>Manipulasi Identitas Tugas:</strong> Mengklaim karya, kode pemrograman, gambar, atau desain yang dibuat 100% oleh AI sebagai karya murni milik pribadi. [cite: 17]</li>
+                <li><strong>Plagiarisme Total (Copy-Paste):</strong> Menyalin mentah-mentah jawaban dari AI (seperti ChatGPT, Gemini, dll.) untuk mengerjakan PR, esai, atau tugas sekolah tanpa adanya proses analisis dan penulisan ulang oleh diri sendiri.</li>
+                <li><strong>Kecurangan Ujian/Kuis:</strong> Mengaktifkan atau mengakses AI dalam bentuk apa pun selama ujian, ulangan harian, atau kuis berlangsung, kecuali atas instruksi guru yang bersangkutan.</li>
+                <li><strong>Manipulasi Identitas Tugas:</strong> Mengklaim karya, kode pemrograman, gambar, atau desain yang dibuat 100% oleh AI sebagai karya murni milik pribadi.</li>
             </ul>
 
-            <h3 class="forbidden-title">Larangan Penggunaan AI untuk Tindakan Kriminal & Pelanggaran Etika [cite: 18]</h3>
-            <p>Segala bentuk penyalahgunaan teknologi AI yang melanggar hukum dan norma moral akan ditindak dengan <strong>Sanksi Berat/Dikeluarkan dari Sekolah</strong>: [cite: 19]</p>
+            <h3 class="sub-title-forbidden">Larangan Penggunaan AI untuk Tindakan Kriminal & Pelanggaran Etika</h3>
+            <p>Segala bentuk penyalahgunaan teknologi AI yang melanggar hukum dan norma moral akan ditindak dengan <strong>Sanksi Berat/Dikeluarkan dari Sekolah</strong>:</p>
             <ul>
-                <li><strong>Konten Pornografi/Asusila:</strong> Menggunakan AI (seperti deepfake atau generator gambar) untuk membuat, mengubah, atau memanipulasi wajah/tubuh orang lain (terutama warga sekolah) menjadi konten pornografi/tidak senonoh. [cite: 20]</li>
-                <li><strong>Penyebaran Informasi Palsu (Hoax & Fitnah):</strong> Memanfaatkan AI untuk menyusun teks, rekaman suara palsu, atau video rekayasa yang bertujuan menyebarkan berita bohong, memfitnah, atau merundung (bullying) sesama murid atau guru. [cite: 21]</li>
-                <li><strong>Pelanggaran Hak Cipta & Peretasan:</strong> Menggunakan AI untuk membobol sistem keamanan sekolah atau mencuri data pribadi warga sekolah. [cite: 22]</li>
+                <li><strong>Konten Pornografi/Asusila:</strong> Menggunakan AI (seperti deepfake atau generator gambar) untuk membuat, mengubah, atau memanipulasi wajah/tubuh orang lain (terutama warga sekolah) menjadi konten pornografi/tidak senonoh.</li>
+                <li><strong>Penyebaran Informasi Palsu (Hoax & Fitnah):</strong> Memanfaatkan AI untuk menyusun teks, rekaman suara palsu, atau video rekayasa yang bertujuan menyebarkan berita bohong, memfitnah, atau merundung (bullying) sesama murid atau guru.</li>
+                <li><strong>Pelanggaran Hak Cipta & Peretasan:</strong> Menggunakan AI untuk membobol sistem keamanan sekolah atau mencuri data pribadi warga sekolah.</li>
             </ul>
 
             <div class="alert-box">
-                Jika ada penggunaan AI yang tidak sesuai aturan di atas maka akan mendapat teguran/peringatan, pembinaan hingga pengunduran diri dari sekolah. [cite: 23]
+                Jika ada penggunaan AI yang tidak sesuai aturan di atas maka akan mendapat teguran/peringatan, pembinaan hingga pengunduran diri dari sekolah.
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>Ketidakhadiran Tanpa Keterangan / Persetujuan [cite: 24]</h2>
-            <p>Every ketidakhadiran harus diketahui oleh sekolah. Sekolah akan memberikan kompensasi dengan alasan sakit, kedukaan, bencana, mengikuti lomba, atau tugas sekolah. [cite: 25] Namun jika ketidakhadiran tidak diketahui atau disetujui sekolah maka murid yang bersangkutan akan mendapatkan konsekuensi. [cite: 26]</p>
+        <div class="card" id="ketidakhadiran">
+            <h2>II. Ketidakhadiran Tanpa Keterangan / Persetujuan Pihak Sekolah</h2>
+            <p>Setiap ketidakhadiran harus diketahui oleh sekolah. Sekolah akan memberikan kompensasi dengan alasan sakit, kedukaan, bencana, mengikuti lomba, tugas sekolah. Namun jika ketidakhadiran tidak diketahui atau disetujui sekolah maka murid yang bersangkutan akan mendapatkan konsekuensi.</p>
 
-            <h3>Alasan yang TIDAK AKAN DISETUJUI sebagai izin sah: [cite: 27]</h3>
+            <h3>Alasan-alasan yang TIDAK AKAN DISETUJUI sebagai izin sah oleh sekolah adalah:</h3>
             <ol>
-                <li>Pergi berekreasi, berlibur, atau mudik di luar kalender libur resmi sekolah. [cite: 28]</li>
-                <li>Menghadiri acara seremonial keluarga yang tidak mendesak. [cite: 29]</li>
-                <li>Menemani urusan pribadi orang tua yang tidak ada hubungannya dengan kepentingan mendasar murid. [cite: 30]</li>
-                <li>Alasan lain yang setelah diverifikasi oleh sekolah dinilai tidak bisa dipertanggungjawabkan. [cite: 31]</li>
+                <li>Pergi berekreasi, berlibur, atau mudik di luar kalender libur resmi sekolah.</li>
+                <li>Menghadiri acara seremonial keluarga yang tidak mendesak.</li>
+                <li>Menemani urusan pribadi orang tua yang tidak ada hubungannya dengan kepentingan mendasar murid.</li>
+                <li>Alasan lain yang setelah diverifikasi oleh sekolah dinilai tidak bisa dipertanggungjawabkan.</li>
             </ol>
 
             <div class="consequence-box">
-                <p><strong>Konsekuensi Pelanggaran Ketidakhadiran:</strong> [cite: 32]</p>
+                <p>Jika murid yang bersangkutan melakukan tindakan pelanggaran seperti yang disebutkan di atas, maka akan diberi konsekuensi berupa:</p>
                 <ul>
-                    <li>Murid wajib membuat rangkuman/resume tertulis tangan secara komprehensif untuk seluruh mata pelajaran yang berlangsung di hari ketidakhadiran tersebut. [cite: 33]</li>
-                    <li>Jika ketidakhadiran disebabkan karena pergi berekreasi atau acara keluarga, murid wajib membuat laporan perjalanan/kegiatan tertulis yang menceritakan esensi kegiatan tersebut, apa yang dipelajari selama pergi, dilengkapi dengan bukti dokumentasi. [cite: 34]</li>
-                    <li>Resume atau laporan tersebut harus diserahkan ke wali kelas saat murid hadir di sekolah. [cite: 35]</li>
+                    <li>Murid wajib membuat rangkuman/resume tertulis tangan secara komprehensif untuk seluruh mata pelajaran yang berlangsung di hari ketidakhadiran tersebut.</li>
+                    <li>Jika ketidakhadiran disebabkan karena pergi berekreasi atau acara keluarga, murid wajib membuat laporan perjalanan/kegiatan tertulis yang menceritakan esensi kegiatan tersebut, apa yang dipelajari selama pergi, dilengkapi dengan bukti dokumentasi.</li>
+                    <li>Resume atau laporan tersebut harus diserahkan ke walikelas saat murid hadir di sekolah.</li>
                 </ul>
             </div>
-        </section>
+        </div>
+
+        <div class="card" id="evaluasi-tatib">
+            <h2>III. Evaluasi Tatib (Tata Tertib)</h2>
+            
+            <div class="eval-grid">
+                <div class="eval-column">
+                    <h3 class="sub-title-eval-up">Hal-hal yang Sudah Berkembang:</h3>
+                    <ul>
+                        <li>Walikelas mendampingi dan aktif melakukan pembinaan terhadap muridnya.</li>
+                        <li>Koordinasi guru, walikelas dan tatib sudah responsif.</li>
+                        <li>Dukungan KSP dan Waka Kesiswaan sangat besar dalam membantu guru tatib melakukan penindakan.</li>
+                        <li>Pendataan digital membantu pengambilan keputusan dalam pembinaan lanjut.</li>
+                        <li>Pemberian pembinaan sudah sesuai dengan kebutuhan dan tetap konsisten.</li>
+                        <li>Penegakkan peraturan terukur dan mengedepankan prikemanusiaan (humanis).</li>
+                        <li>Koordinasi dengan ortu sudah baik.</li>
+                    </ul>
+                </div>
+
+                <div class="eval-column">
+                    <h3 class="sub-title-eval-down">Hal-hal yang Perlu Dikembangkan:</h3>
+                    <ul>
+                        <li>Penegakan peraturan belum tegas.</li>
+                        <li>Pemberian pembinaan tidak sama satu dengan lainnya.</li>
+                        <li>Peraturan di Buku Sikap masih banyak yang belum jelas.</li>
+                        <li>Walikelas belum konsisten mendampingi muridnya.</li>
+                        <li>Pemberian pembinaan menyita waktu.</li>
+                        <li>Masih banyak guru dan walikelas yang menyerahkan pembinaan ke tatib.</li>
+                        <li>Dukungan Guru BK kurang dalam memberikan penguatan murid yang berkasus.</li>
+                        <li>Tatib ikut menangani masalah kesehatan mental.</li>
+                        <li>Tatib memberikan pembinaan kepada murid yang bermasalah dengan akademis.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </body>
