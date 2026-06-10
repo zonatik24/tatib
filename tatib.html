@@ -3,797 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografis Analisis Tatib - SMP Santa Angela</title>
-    <!-- Tailwind CSS -->
+    <title>Infografis Angket Tatib SMP Santa Angela</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome untuk Ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0f4fe',
-                            100: '#dbe5fe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#1e3a8a',
-                        },
-                        accent: {
-                            warning: '#f59e0b',
-                            danger: '#ef4444',
-                            success: '#10b981',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
         }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 min-h-screen flex flex-col antialiased">
+<body class="p-4 md:p-8 text-slate-800">
 
-    <!-- TOP HEADER -->
-    <header class="bg-gradient-to-r from-brand-900 to-brand-700 text-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <div class="bg-white/10 p-2.5 rounded-xl border border-white/20">
-                    <a href="index.html"><i class="fa-solid fa-shield-halved text-2xl text-yellow-300"></i></a>
+    <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+        
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white p-8 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-700/30 via-transparent to-transparent"></div>
+            <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Laporan Evaluasi Tatib</span>
+                    <h1 class="text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">RESUME ANGKET KEDISIPLINAN</h1>
+                    <p class="text-indigo-200 mt-1 text-sm md:text-base">SMP Santa Angela Bandung • Evaluasi Penegakkan Buku Sikap</p>
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/10 self-start md:self-auto">
+                    <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-semibold text-slate-200">Data Teranalisis: 15 Responden Guru</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Highlight Statistik Utama -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-slate-50 border-b border-slate-100">
+            <!-- Stat 1 -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
+                <div class="p-3 bg-rose-50 text-rose-600 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
                 </div>
                 <div>
-                    <h1 class="text-lg sm:text-xl font-bold tracking-tight">SMP SANTA ANGELA BANDUNG</h1>
-                    <p class="text-xs text-brand-100 font-medium">Dashboard Analisis Tatib & Strategi Kedisiplinan</p>
+                    <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Isu Paling Kritis</p>
+                    <h3 class="text-lg font-bold text-slate-800 mt-1">Perbedaan Ketegasan</h3>
+                    <p class="text-xs text-rose-500 font-medium mt-0.5">Sangat dirasakan oleh mayoritas guru</p>
                 </div>
             </div>
-            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                <a href="#kpi" class="text-brand-50 hover:text-white transition">Data Angket</a>
-                <a href="#sop" class="text-brand-50 hover:text-white transition">SOP Interaktif</a>
-                <a href="#simulator" class="text-brand-50 hover:text-white transition">Simulator Kasus</a>
-                <a href="#strategi" class="text-brand-50 hover:text-white transition-all bg-yellow-400 text-brand-900 px-4 py-2 rounded-lg font-bold hover:bg-yellow-300 shadow">Aksi Strategis</a>
-            </div>
-        </div>
-    </header>
 
-    <!-- MAIN CONTAINER -->
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        
-        <!-- REPORT SUMMARY BANNER -->
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <div class="space-y-2">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-50 text-green-700 text-xs font-semibold rounded-full border border-green-200">
-                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                    Tahun Ajaran 2025/2026 - Berjalan Baik
+            <!-- Stat 2 -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
+                <div class="p-3 bg-amber-50 text-amber-600 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Laporan Analisis Tata Tertib</h2>
-                <p class="text-slate-500 max-w-2xl text-sm sm:text-base">
-                    Sistem kedisiplinan SMP Santa Angela berjalan kondusif. Namun, berdasarkan angket evaluasi guru, terdapat celah inkonsistensi yang perlu ditangani secara sistematis.
-                </p>
+                <div>
+                    <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Kendala Teknis Utama</p>
+                    <h3 class="text-lg font-bold text-slate-800 mt-1">Keterbatasan Waktu</h3>
+                    <p class="text-xs text-amber-600 font-medium mt-0.5">Berkejaran dengan materi mengajar</p>
+                </div>
             </div>
-            <div class="flex flex-wrap gap-3 w-full sm:w-auto">
-                <button onclick="scrollToElement('strategi')" class="flex-1 sm:flex-initial text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-3 rounded-xl transition text-sm shadow shadow-brand-200">
-                    Lihat Rekomendasi
-                </button>
-                <button onclick="scrollToElement('simulator')" class="flex-1 sm:flex-initial text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-5 py-3 rounded-xl transition text-sm">
-                    Mulai Simulasi
-                </button>
+
+            <!-- Stat 3 -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Kebutuhan Mendesak</p>
+                    <h3 class="text-lg font-bold text-slate-800 mt-1">Konsistensi & Proteksi</h3>
+                    <p class="text-xs text-blue-600 font-medium mt-0.5">Satu suara & dukungan manajemen</p>
+                </div>
             </div>
         </div>
 
-        <!-- KPI CARDS GRID -->
-        <section id="kpi" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                <div class="flex justify-between items-start">
-                    <div class="space-y-1">
-                        <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Kerawanan Tertinggi</p>
-                        <h3 class="text-lg font-bold text-slate-800">Inkonsistensi Guru</h3>
+        <!-- Main Content Grid -->
+        <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- KIRI (6 Kolom): Analisis Masalah & Persepsi -->
+            <div class="lg:col-span-7 space-y-8">
+                
+                <!-- Section: Peta Konflik & Persepsi Guru -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="w-1.5 h-6 bg-indigo-600 rounded-full"></span>
+                        <h2 class="text-xl font-bold text-slate-900">Persepsi & Kekhawatiran Guru di Lapangan</h2>
                     </div>
-                    <span class="bg-red-50 text-red-600 font-extrabold text-lg px-3 py-1 rounded-lg">4.09</span>
-                </div>
-                <div class="mt-4 pt-4 border-t border-slate-100">
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        <i class="fa-solid fa-triangle-exclamation text-red-500 mr-1"></i> 
-                        Adanya perbedaan tingkat ketegasan antar rekan guru dalam menindak pelanggaran yang sama.
-                    </p>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                <div class="flex justify-between items-start">
-                    <div class="space-y-1">
-                        <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Potensi Pendukung</p>
-                        <h3 class="text-lg font-bold text-slate-800">Waktu Pembinaan</h3>
-                    </div>
-                    <span class="bg-green-50 text-green-600 font-extrabold text-lg px-3 py-1 rounded-lg">3.55</span>
-                </div>
-                <div class="mt-4 pt-4 border-t border-slate-100">
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        <i class="fa-solid fa-circle-check text-green-500 mr-1"></i> 
-                        Guru secara umum merasa masih memiliki waktu luang untuk membina siswa secara mandiri.
-                    </p>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                <div class="flex justify-between items-start">
-                    <div class="space-y-1">
-                        <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Tingkat Keraguan</p>
-                        <h3 class="text-lg font-bold text-slate-800">Ambigu Buku Sikap</h3>
-                    </div>
-                    <span class="bg-amber-50 text-amber-600 font-extrabold text-lg px-3 py-1 rounded-lg">2.91</span>
-                </div>
-                <div class="mt-4 pt-4 border-t border-slate-100">
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        <i class="fa-solid fa-circle-info text-amber-500 mr-1"></i> 
-                        Batasan jenis sanksi atau deskripsi aturan tertentu dinilai terkadang multi-tafsir.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- DATA GRAPH SECTION -->
-        <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8">
-            <div class="flex flex-col lg:flex-row gap-8 items-center">
-                <div class="w-full lg:w-3/5 space-y-4">
-                    <div class="flex items-center space-x-2 text-brand-600">
-                        <i class="fa-solid fa-chart-bar font-bold"></i>
-                        <span class="text-xs font-bold uppercase tracking-wider">Hasil Pengukuran Angket Kuantitatif</span>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Rerata Skor Indikator Kendala</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        Hasil survei memperlihatkan bahwa hambatan eksternal seperti ketakutan kepada orang tua murid (2.27) atau kekhawatiran minimnya perlindungan manajemen sekolah (2.18) berada pada kategori rendah. Kendala terbesar bersifat internal, yaitu konsistensi penegakkan komitmen antarguru.
-                    </p>
-                    <div class="relative w-full h-[320px] sm:h-[380px]">
-                        <canvas id="surveyChart"></canvas>
-                    </div>
-                </div>
-                <div class="w-full lg:w-2/5 space-y-6 bg-slate-50 p-6 rounded-2xl border border-slate-100 self-stretch flex flex-col justify-between">
+                    
                     <div class="space-y-4">
-                        <h4 class="font-bold text-slate-800 text-md flex items-center gap-2">
-                            <i class="fa-solid fa-brain text-brand-500"></i>
-                            Analisa Mengapa Kasus Berulang
-                        </h4>
-                        <div class="space-y-3">
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-100 flex gap-3 shadow-sm">
-                                <span class="bg-red-50 text-red-600 p-2 rounded-lg text-xs h-fit font-bold">01</span>
-                                <p class="text-xs text-slate-600 leading-relaxed"><strong class="text-slate-800">Celah Konsistensi:</strong> Siswa SMP adalah pengamat ulung. Mereka memanfaatkan beda standar guru untuk menawar kepatuhan aturan.</p>
-                            </div>
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-100 flex gap-3 shadow-sm">
-                                <span class="bg-amber-50 text-amber-600 p-2 rounded-lg text-xs h-fit font-bold">02</span>
-                                <p class="text-xs text-slate-600 leading-relaxed"><strong class="text-slate-800">Sanksi Tidak Jera:</strong> Program salam sapa atau aktivitas biasa mulai dianggap rutinitas, bukan konsekuensi logis.</p>
-                            </div>
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-100 flex gap-3 shadow-sm">
-                                <span class="bg-brand-50 text-brand-600 p-2 rounded-lg text-xs h-fit font-bold">03</span>
-                                <p class="text-xs text-slate-600 leading-relaxed"><strong class="text-slate-800">Dukungan Orang Tua:</strong> Rendahnya kerja sama pengawasan di luar sekolah berandil besar memperpanjang durasi pembinaan siswa.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-brand-900 text-white p-4 rounded-xl space-y-1">
-                        <p class="text-xs font-bold text-yellow-300">Kesimpulan Tim Tatib:</p>
-                        <p class="text-[11px] leading-relaxed text-slate-200">
-                            "Solusi tidak membutuhkan sanksi fisik baru, melainkan penyelarasan gerak satu suara seluruh jajaran pengajar."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INTERACTIVE SOP SECTION -->
-        <section id="sop" class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 space-y-6">
-            <div class="text-center max-w-2xl mx-auto space-y-2">
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Alur Penyelesaian Masalah Modern</span>
-                <h3 class="text-2xl font-bold text-slate-900">Standard Operating Procedure (SOP) Interaktif</h3>
-                <p class="text-sm text-slate-500">Klik salah satu aktor di bawah ini untuk melihat tanggung jawab dan instrumen yang digunakan.</p>
-            </div>
-
-            <!-- Interaktif Flow Tabs -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <button onclick="setActiveSop('mapel')" id="btnSopMapel" class="sop-tab-btn flex items-center justify-between p-5 rounded-2xl border text-left transition duration-200 bg-brand-50 border-brand-200 text-brand-900 shadow-sm shadow-brand-100">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-brand-600 text-white p-3 rounded-xl"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <!-- Bar 1 -->
                         <div>
-                            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase">Tahap 1</p>
-                            <h4 class="font-bold text-slate-900">Guru Mata Pelajaran</h4>
+                            <div class="flex justify-between text-sm font-semibold text-slate-700 mb-1">
+                                <span>Merasakan Perbedaan Ketegasan Rekan Guru (Standar Ganda)</span>
+                                <span class="text-rose-600">Sangat Tinggi (Skor ~4.3/5)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-rose-500 h-full rounded-full" style="width: 86%"></div>
+                            </div>
                         </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right text-brand-400"></i>
-                </button>
-                <button onclick="setActiveSop('walas')" id="btnSopWalas" class="sop-tab-btn flex items-center justify-between p-5 rounded-2xl border text-left transition duration-200 bg-white border-slate-150 text-slate-700 hover:bg-slate-50">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-slate-500 text-white p-3 rounded-xl"><i class="fa-solid fa-users"></i></div>
+
+                        <!-- Bar 2 -->
                         <div>
-                            <p class="text-xs font-bold tracking-wider text-slate-400 uppercase">Tahap 2</p>
-                            <h4 class="font-bold text-slate-800">Wali Kelas (Utama)</h4>
+                            <div class="flex justify-between text-sm font-semibold text-slate-700 mb-1">
+                                <span>Ragu Menindak karena Aturan Buku Sikap "Abu-abu"</span>
+                                <span class="text-amber-600">Sedang-Tinggi (Skor ~3.1/5)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-amber-500 h-full rounded-full" style="width: 62%"></div>
+                            </div>
                         </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right text-slate-300"></i>
-                </button>
-                <button onclick="setActiveSop('tatib')" id="btnSopTatib" class="sop-tab-btn flex items-center justify-between p-5 rounded-2xl border text-left transition duration-200 bg-white border-slate-150 text-slate-700 hover:bg-slate-50">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-slate-500 text-white p-3 rounded-xl"><i class="fa-solid fa-gavel"></i></div>
+
+                        <!-- Bar 3 -->
                         <div>
-                            <p class="text-xs font-bold tracking-wider text-slate-400 uppercase">Tahap 3</p>
-                            <h4 class="font-bold text-slate-800">Tim Tatib & BK</h4>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right text-slate-300"></i>
-                </button>
-            </div>
-
-            <!-- Detail SOP Box -->
-            <div id="sopDetailBox" class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 transition-all duration-300">
-                <!-- Loaded dynamically by JS -->
-            </div>
-        </section>
-
-        <!-- SIMULATOR SECTION -->
-        <section id="simulator" class="bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
-                <div class="space-y-2">
-                    <span class="text-xs font-bold text-yellow-300 uppercase tracking-widest flex items-center gap-2">
-                        <i class="fa-solid fa-microchip"></i> Uji Kasus Siswa Anda
-                    </span>
-                    <h3 class="text-2xl font-bold text-white">Simulator Alur Pelanggaran</h3>
-                    <p class="text-slate-300 text-sm max-w-xl">Simulasikan kasus pelanggaran di sini untuk mengetahui langkah penanganan yang tepat menurut draf usulan Buku Sikap yang baru.</p>
-                </div>
-                <div class="bg-white/10 px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2 text-xs">
-                    <i class="fa-solid fa-database text-yellow-300"></i>
-                    <span>Tautan Database Kesiswaan Otomatis</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                <!-- Form Input -->
-                <div class="lg:col-span-5 bg-white/5 p-6 rounded-2xl border border-white/10 space-y-5">
-                    <div class="space-y-2">
-                        <label class="text-xs font-semibold text-slate-300 block">Pilih Kategori Pelanggaran</label>
-                        <select id="simKategori" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-                            <option value="ringan_akademis">Kelalaian Tugas & Perangkat Belajar (Ringan)</option>
-                            <option value="kehadiran">Keterlambatan / Kehadiran (Menengah)</option>
-                            <option value="atribut_seragam">Penampilan & Aksesoris Seragam (Menengah)</option>
-                            <option value="etika_moral">Etika, Perilaku Kasar, atau Bullying (Berat)</option>
-                        </select>
-                    </div>
-
-                    <div class="space-y-2">
-                        <label class="text-xs font-semibold text-slate-300 block">Riwayat Kejadian Kasus</label>
-                        <div class="grid grid-cols-3 gap-2">
-                            <label class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-700 bg-slate-800/50 cursor-pointer hover:bg-slate-800 transition">
-                                <input type="radio" name="simRiwayat" value="1" checked class="sr-only">
-                                <span class="text-xs text-slate-400">Pertama</span>
-                                <span class="font-extrabold text-white text-lg mt-1">Ke-1</span>
-                            </label>
-                            <label class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-700 bg-slate-800/50 cursor-pointer hover:bg-slate-800 transition">
-                                <input type="radio" name="simRiwayat" value="2" class="sr-only">
-                                <span class="text-xs text-slate-400">Kedua</span>
-                                <span class="font-extrabold text-white text-lg mt-1">Ke-2</span>
-                            </label>
-                            <label class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-700 bg-slate-800/50 cursor-pointer hover:bg-slate-800 transition">
-                                <input type="radio" name="simRiwayat" value="3" class="sr-only">
-                                <span class="text-xs text-slate-400">Sering</span>
-                                <span class="font-extrabold text-white text-lg mt-1">≥ Ke-3</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="space-y-2">
-                        <label class="text-xs font-semibold text-slate-300 block">Faktor Pendukung / Kondisi Siswa</label>
-                        <select id="simKondisi" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-                            <option value="biasa">Normal / Kurang Pemahaman Aturan</option>
-                            <option value="ngeyel">Sulit Dikendalikan / Suka Membela Diri</option>
-                            <option value="keluarga">Kendala dari Pola Asuh Rumah/Orang Tua</option>
-                            <option value="emosi">Murni Masalah Psikologis / Cari Perhatian</option>
-                        </select>
-                    </div>
-
-                    <button onclick="calculateSimulation()" class="w-full bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold py-3.5 rounded-xl transition shadow shadow-yellow-500/20 text-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-play"></i> Analisis Langkah Penanganan
-                    </button>
-                </div>
-
-                <!-- Hasil Simulator Output -->
-                <div class="lg:col-span-7 bg-white/10 p-6 sm:p-8 rounded-2xl border border-white/10 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <h4 class="font-bold text-yellow-300 text-sm tracking-wider uppercase flex items-center gap-2">
-                            <i class="fa-solid fa-clipboard-check"></i> Hasil Analisis & Langkah Solutif
-                        </h4>
-                        <!-- Output Alur Target -->
-                        <div id="simOutputAlur" class="p-4 bg-white/5 rounded-xl border border-white/10 space-y-1">
-                            <p class="text-xs text-slate-400 uppercase font-semibold">Siapa yang harus menindak?</p>
-                            <h5 id="simOutputAktor" class="text-lg font-bold text-white">Silakan tekan tombol 'Analisis' untuk memulai.</h5>
+                            <div class="flex justify-between text-sm font-semibold text-slate-700 mb-1">
+                                <span>Khawatir Reaksi Negatif / Tuntutan Hukum Orang Tua</span>
+                                <span class="text-amber-600">Cukup Khawatir (Skor ~2.8/5)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-amber-500 h-full rounded-full" style="width: 56%"></div>
+                            </div>
                         </div>
 
-                        <!-- Detil Pembinaan -->
-                        <div class="space-y-1.5">
-                            <p class="text-xs text-slate-400 uppercase font-semibold">Rekomendasi Pembinaan & Sanksi:</p>
-                            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800/80">
-                                <ul id="simOutputTindakan" class="list-disc list-inside text-sm text-slate-200 space-y-2">
-                                    <li class="text-slate-400 italic">Data belum disimulasikan.</li>
-                                </ul>
+                        <!-- Bar 4 -->
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold text-slate-700 mb-1">
+                                <span>Merasakan Kurang Dukungan / Proteksi Manajemen</span>
+                                <span class="text-slate-600">Bervariasi (Skor ~2.4/5)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-slate-400 h-full rounded-full" style="width: 48%"></div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="flex items-center justify-between p-4 bg-brand-900/40 rounded-xl border border-brand-800/40 text-xs">
-                        <span class="text-slate-300">Pencatatan data dilakukan otomatis ke Wali Kelas via sistem Google Form.</span>
-                        <span class="text-emerald-400 font-bold flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span> Terkoneksi
-                        </span>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 4 PILLARS STRATEGIC ACTIONS -->
-        <section id="strategi" class="space-y-6">
-            <div class="text-center max-w-2xl mx-auto space-y-2">
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Langkah Konkret ke Depan</span>
-                <h3 class="text-2xl font-bold text-slate-900">4 Pilar Rencana Aksi Solutif</h3>
-                <p class="text-sm text-slate-500">Transformasi sistem ketertiban demi kenyamanan belajar bersama di SMP Santa Angela.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Pilar 1 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-4 hover:shadow-md transition">
-                    <div class="bg-brand-50 text-brand-600 p-4 rounded-xl h-fit">
-                        <i class="fa-solid fa-bullhorn text-xl"></i>
+                <!-- Section: Mengapa Langsung Dioper ke Piket/Tatib? -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="w-1.5 h-6 bg-amber-500 rounded-full"></span>
+                        <h2 class="text-lg font-bold text-slate-900">Alasan Utama Guru "Bypass" Penanganan Mandiri</h2>
                     </div>
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-slate-800 text-lg">1. Gerakan Deklarasi "Satu Suara"</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Membangun komitmen bersama di antara semua guru. Penegakkan sanksi kuku panjang, kuku bertato, pewarna rambut, atau ikat rambut putri harus seragam, tanpa toleransi tebang pilih. Siswa tidak akan memiliki celah membanding-bandingkan guru lagi.
-                        </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded">Faktor Waktu</span>
+                            <p class="text-xs text-slate-600 mt-2">Guru terdesak kebutuhan menuntaskan target materi ajar di kelas sebelum jam usai.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded">Karakter Siswa</span>
+                            <p class="text-xs text-slate-600 mt-2">Siswa dinilai keras kepala atau terlalu sulit dikendalikan secara individu di dalam kelas.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Faktor Regulasi</span>
+                            <p class="text-xs text-slate-600 mt-2">Memahami bahwa klasifikasi sanksi di Buku Sikap memang harus diserahkan langsung.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Aspek Psikologis</span>
+                            <p class="text-xs text-slate-600 mt-2">Khawatir salah mengambil tindakan spontan yang memicu masalah hukum/protes sosial.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Pilar 2 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-4 hover:shadow-md transition">
-                    <div class="bg-amber-50 text-amber-600 p-4 rounded-xl h-fit">
-                        <i class="fa-solid fa-book-open text-xl"></i>
+            </div>
+
+            <!-- KANAN (5 Kolom): Mengapa Tidak Efektif & Solusi -->
+            <div class="lg:col-span-5 space-y-8">
+                
+                <!-- Section: Faktor Ketidakefektifan -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="w-1.5 h-6 bg-rose-600 rounded-full"></span>
+                        <h2 class="text-xl font-bold text-slate-900">Akar Ketidakefektifan Pembinaan</h2>
                     </div>
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-slate-800 text-lg">2. Rekondisi & Sinkronisasi Buku Sikap</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Penyederhanaan tata bahasa dan batasan deskripsi sanksi agar lebih lugas, transparan, dan tidak multitafsir. Menambahkan visualisasi alur konsekuensi yang jelas bagi siswa dan wali murid sejak awal tahun ajaran baru.
-                        </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 bg-red-50/50 p-3 rounded-xl border border-red-100/50">
+                            <div class="w-5 h-5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 text-xs font-bold">1</div>
+                            <p class="text-xs text-slate-700 leading-relaxed"><strong class="text-slate-900">Tidak Ada Efek Jera:</strong> Konsekuensi saat ini terasa formalitas, tidak menyentuh akar disiplin siswa.</p>
+                        </li>
+                        <li class="flex items-start gap-3 bg-red-50/50 p-3 rounded-xl border border-red-100/50">
+                            <div class="w-5 h-5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 text-xs font-bold">2</div>
+                            <p class="text-xs text-slate-700 leading-relaxed"><strong class="text-slate-900">Celah Konsistensi:</strong> Pelanggaran kecil (rambut, atribut, ikat pinggang) sering dibiarkan oleh sebagian guru, memicu siswa meremehkan aturan.</p>
+                        </li>
+                        <li class="flex items-start gap-3 bg-red-50/50 p-3 rounded-xl border border-red-100/50">
+                            <div class="w-5 h-5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 text-xs font-bold">3</div>
+                            <p class="text-xs text-slate-700 leading-relaxed"><strong class="text-slate-900">Gejala Masalah Laten:</strong> Tindakan nakal siswa sering kali dipicu isu keluarga, kebutuhan pengakuan, atau kesulitan belajar emosional.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section: Rekomendasi / Kebutuhan Guru -->
+                <div class="bg-indigo-900 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-16 -bottom-16 w-32 h-32 bg-indigo-800 rounded-full opacity-50"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                            4 Pilar Solusi Rekomendasi
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <!-- Pilar 1 -->
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-indigo-800 text-indigo-200 flex items-center justify-center shrink-0 text-xs font-bold">A</div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white uppercase">Satu Suara & Sinkronisasi</h4>
+                                    <p class="text-[11px] text-indigo-200 mt-0.5">Hilangkan perbedaan standar ketegasan antar guru mata pelajaran.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pilar 2 -->
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-indigo-800 text-indigo-200 flex items-center justify-center shrink-0 text-xs font-bold">B</div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white uppercase">Revisi & Klarifikasi Buku Sikap</h4>
+                                    <p class="text-[11px] text-indigo-200 mt-0.5">Batasan sanksi harus operasional, tegas, dan bebas dari multitafsir.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pilar 3 -->
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-indigo-800 text-indigo-200 flex items-center justify-center shrink-0 text-xs font-bold">C</div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white uppercase">Payung Hukum & Proteksi Guru</h4>
+                                    <p class="text-[11px] text-indigo-200 mt-0.5">Dukungan penuh kepala sekolah & tatib saat berhadapan dengan protes orang tua.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pilar 4 -->
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-indigo-800 text-indigo-200 flex items-center justify-center shrink-0 text-xs font-bold">D</div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white uppercase">Konsekuensi Edukatif yang Jera</h4>
+                                    <p class="text-[11px] text-indigo-200 mt-0.5">Menyusun bentuk sanksi baru yang mendidik, disetujui bersama orang tua siswa.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Pilar 3 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-4 hover:shadow-md transition">
-                    <div class="bg-green-50 text-green-600 p-4 rounded-xl h-fit">
-                        <i class="fa-solid fa-laptop-code text-xl"></i>
-                    </div>
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-slate-800 text-lg">3. Digitalisasi Dashboard Pelaporan Kesiswaan</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Guru Piket menginput data melalui formulir digital kesiswaan yang terintegrasi secara instan. Wali Kelas otomatis mendapatkan notifikasi surel/WhatsApp agar rekapitulasi poin kesiswaan untuk rapor akhir semester dapat diakses secara efisien.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Pilar 4 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-4 hover:shadow-md transition">
-                    <div class="bg-purple-50 text-purple-600 p-4 rounded-xl h-fit">
-                        <i class="fa-solid fa-heart-pulse text-xl"></i>
-                    </div>
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-slate-800 text-lg">4. Penerapan Konsep Restorative Justice</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Mengalihkan sanksi kaku formalitas (seperti berdiri di gerbang jika terlambat) ke konsekuensi logis mendidik yang membangun karakter. Siswa yang merusak fasilitas harus dilatih untuk bertanggung jawab merawat/memperbaiki kembali fasilitas sekolah tersebut.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SIGNATURE FORM COMMITMENT -->
-        <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 space-y-6">
-            <div class="max-w-xl mx-auto text-center space-y-2">
-                <h3 class="text-xl font-bold text-slate-900">Kolom Komitmen Deklarasi Bersama</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">Isi nama Anda untuk menandatangani pakta kesepahaman komitmen satu suara penegakkan kedisiplinan SMP Santa Angela secara kolektif.</p>
             </div>
 
-            <div class="max-w-md mx-auto bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
-                <div class="space-y-2">
-                    <label class="text-xs font-semibold text-slate-600 block">Nama Pendidik / Staf</label>
-                    <input type="text" id="signerName" placeholder="Masukkan nama lengkap Anda..." class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-                </div>
-                <div class="space-y-2">
-                    <label class="text-xs font-semibold text-slate-600 block">Jabatan / Peran</label>
-                    <select id="signerRole" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-                        <option value="Guru Mapel">Guru Mata Pelajaran</option>
-                        <option value="Wali Kelas">Wali Kelas</option>
-                        <option value="Guru Piket">Guru Piket</option>
-                        <option value="Tim Tatib / BK">Tim Tatib / Guru BK</option>
-                        <option value="Manajemen">Kepala Sekolah / Struktur Manajemen</option>
-                    </select>
-                </div>
-                <button onclick="signCommitment()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition text-sm">
-                    Tandatangani Komitmen Secara Digital
-                </button>
-            </div>
-
-            <!-- Custom Message Box instead of Alert -->
-            <div id="alertBox" class="hidden max-w-md mx-auto p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl flex items-center justify-between text-xs transition duration-300">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-circle-check text-emerald-500 text-base"></i>
-                    <span id="alertMessage">Komitmen berhasil disimpan!</span>
-                </div>
-                <button onclick="closeAlert()" class="text-emerald-500 hover:text-emerald-700"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-
-            <!-- Signed list -->
-            <div class="max-w-xl mx-auto space-y-3">
-                <p class="text-center text-xs text-slate-400 font-semibold uppercase tracking-wider">Pendidik yang Telah Menandatangani Komitmen:</p>
-                <div id="signerContainer" class="flex flex-wrap justify-center gap-2">
-                    <span class="bg-brand-50 border border-brand-100 text-brand-700 text-xs px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-signature mr-1 text-slate-400"></i> Maria Sisilia, S.Pd (Koord. Tatib)</span>
-                    <span class="bg-brand-50 border border-brand-100 text-brand-700 text-xs px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-signature mr-1 text-slate-400"></i> Fransiskus, M.Pd (Kepala Sekolah)</span>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <div>
-                <p class="font-semibold text-slate-200">SMP Santa Angela Bandung</p>
-                <p class="mt-1">Sistem Evaluasi Tata Tertib & Buku Sikap Berkelanjutan.</p>
-            </div>
-            <div>
-                <p>© 2026 Tim Tatib SMP Santa Angela. Semua Hak Dilindungi Undang-Undang.</p>
-            </div>
         </div>
-    </footer>
 
-    <!-- JAVASCRIPT AND CHART CODES -->
-    <script>
-        // Start chart configuration upon window load
-        window.onload = function() {
-            // Render Chart.js
-            const ctx = document.getElementById('surveyChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Inkonsistensi Guru',
-                        'Cukup Waktu Membina',
-                        'Buku Sikap Ambigu',
-                        'Waktu Mengajar Tersita',
-                        'Khawatir Orang Tua',
-                        'Dukungan Manajemen',
-                        'Menguras Emosional'
-                    ],
-                    datasets: [{
-                        label: 'Skor Rata-Rata Indikator Kendala (Skala 1-5)',
-                        data: [4.09, 3.55, 2.91, 2.45, 2.27, 2.18, 2.18],
-                        backgroundColor: [
-                            'rgba(239, 68, 68, 0.85)',   // Inkonsistensi - Red
-                            'rgba(16, 185, 129, 0.85)',  // Waktu Membina - Green
-                            'rgba(245, 158, 11, 0.85)',  // Buku Sikap - Orange
-                            'rgba(99, 102, 241, 0.85)',  // Mengajar Tersita - Purple
-                            'rgba(148, 163, 184, 0.85)', // Khawatir Ortu - Gray
-                            'rgba(148, 163, 184, 0.85)', // Dukungan - Gray
-                            'rgba(148, 163, 184, 0.85)'  // Emosional - Gray
-                        ],
-                        borderColor: [
-                            '#dc2626', '#059669', '#d97706', '#4f46e5', '#64748b', '#64748b', '#64748b'
-                        ],
-                        borderWidth: 1.5,
-                        borderRadius: 8,
-                        borderSkipped: false,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    indexAxis: 'y', // Horizontal bars for readability
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return `Skor: ${context.parsed.x} / 5.00`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            max: 5,
-                            min: 0,
-                            ticks: {
-                                stepSize: 1
-                            },
-                            grid: {
-                                color: '#f1f5f9'
-                            }
-                        },
-                        y: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
+        <!-- Footer / Action Area -->
+        <div class="bg-slate-900 text-slate-400 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800">
+            <div class="text-xs text-center sm:text-left">
+                <p class="font-semibold text-slate-300">Tim Tatib & Kesiswaan SMP Santa Angela Bandung</p>
+                <p class="text-[11px] mt-0.5">Dibuat untuk evaluasi internal penegakkan kedisiplinan dan perbaikan sistem Buku Sikap</p>
+            </div>
+            <button onclick="window.print()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs py-2 px-4 rounded-xl flex items-center gap-2 shadow-md transition-all duration-200 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                </svg>
+                Cetak / Simpan PDF
+            </button>
+        </div>
 
-            // Initialize First SOP View
-            setActiveSop('mapel');
-        };
+    </div>
 
-        // Navigation helper
-        function scrollToElement(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // SOP Data Structure
-        const sopData = {
-            mapel: {
-                title: "Tanggung Jawab Guru Mata Pelajaran",
-                scope: "Pelanggaran Akademis, Kelalaian Tugas, dan Penampilan Ringan",
-                responsibilities: [
-                    "Memberikan teguran lisan secara sopan, tegas, dan bersifat mendidik di area kelas secara langsung.",
-                    "Melakukan pembinaan mandiri di sela-sela jam pelajaran atau pergantian kelas agar tidak mengganggu jam belajar siswa lain.",
-                    "Melakukan input cepat catatan pelanggaran melalui portal Google Form untuk pelaporan otomatis ke pangkalan database sekolah.",
-                    "Menyelesaikan kasus-kasus yang tidak bersifat resistensi tinggi tanpa terburu-buru menyerahkannya ke Guru Piket atau Tatib."
-                ],
-                instruments: [
-                    "Buku Sikap Mandiri Guru",
-                    "Notifikasi Sistem Input Digital (Pencatatan Pertama)"
-                ],
-                colorClass: "bg-brand-600"
-            },
-            walas: {
-                title: "Peran Utama Wali Kelas (Konsolidasi Utama)",
-                scope: "Pelanggaran Berulang, Karakter Sulit, & Hubungan Orang Tua",
-                responsibilities: [
-                    "Memantau berkala database kesiswaan digital terhadap total akumulasi poin hukuman siswa asuhnya.",
-                    "Mengadakan sesi konseling individual serta mediasi Restorative Justice dengan anak bimbingan secara mendalam.",
-                    "Melakukan pemanggilan dan koordinasi dengan orang tua murid jika terjadi akumulasi pelanggaran kualitatif kedua.",
-                    "Meminta perlindungan serta dukungan pendampingan dari Guru BK / Tim Tatib apabila bobot kasus dinilai melebihi otoritas kelas."
-                ],
-                instruments: [
-                    "Lembar Konseling Bimbingan",
-                    "Database Kesiswaan Terpadu",
-                    "Surat Pemanggilan Orang Tua Internal Kelas"
-                ],
-                colorClass: "bg-teal-600"
-            },
-            tatib: {
-                title: "Wewenang Tim Tata Tertib & Guru BK",
-                scope: "Kasus Pelanggaran Berat, Persisten, dan Bersifat Sistemik/Hukum",
-                responsibilities: [
-                    "Menerima pelimpahan berkas kasus kronis berulang dari Wali Kelas secara terstruktur dan formal.",
-                    "Menetapkan dan meluncurkan sanksi administrasi berjenjang (SP 1, SP 2, hingga Tindakan Skorsing Akademik).",
-                    "Memimpin pertemuan tripartit tingkat lanjut (Siswa, Wali Murid, Tim BK/Kesiswaan, dan Kepala Sekolah).",
-                    "Merumuskan konsep draf kebijakan peraturan sekolah agar selalu relevan dengan dinamika hukum dan psikologi perkembangan anak."
-                ],
-                instruments: [
-                    "Buku Sikap Sekolah (Ketentuan Sanksi Khusus)",
-                    "Surat Peringatan Resmi Sekolah (SP)",
-                    "Surat Keputusan Tindakan Khusus & Skorsing"
-                ],
-                colorClass: "bg-amber-600"
-            }
-        };
-
-        // Active SOP State Management
-        function setActiveSop(key) {
-            // Update button styles
-            const buttons = document.querySelectorAll('.sop-tab-btn');
-            buttons.forEach(btn => {
-                btn.className = "sop-tab-btn flex items-center justify-between p-5 rounded-2xl border text-left transition duration-200 bg-white border-slate-150 text-slate-700 hover:bg-slate-50";
-            });
-
-            // Highlight active button
-            let activeBtnId = 'btnSopMapel';
-            if (key === 'walas') activeBtnId = 'btnSopWalas';
-            if (key === 'tatib') activeBtnId = 'btnSopTatib';
-            
-            const activeBtn = document.getElementById(activeBtnId);
-            activeBtn.className = "sop-tab-btn flex items-center justify-between p-5 rounded-2xl border text-left transition duration-200 bg-brand-50 border-brand-200 text-brand-900 shadow-sm shadow-brand-100";
-
-            // Update content box
-            const data = sopData[key];
-            const contentBox = document.getElementById('sopDetailBox');
-            contentBox.innerHTML = `
-                <div class="space-y-6">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                        <div class="space-y-1">
-                            <span class="inline-block px-3 py-1 text-[11px] font-bold text-white rounded-full ${data.colorClass}">Rincian Tugas</span>
-                            <h4 class="text-xl font-bold text-slate-900">${data.title}</h4>
-                        </div>
-                        <div class="text-xs text-slate-500 bg-white px-3 py-1.5 rounded-lg border border-slate-200">
-                            <strong>Fokus Ruang Lingkup:</strong> ${data.scope}
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200">
-                        <div class="space-y-3">
-                            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400">Tanggung Jawab Utama:</h5>
-                            <ul class="space-y-2 text-sm text-slate-600">
-                                ${data.responsibilities.map(item => `
-                                    <li class="flex items-start gap-2">
-                                        <i class="fa-solid fa-check text-green-500 mt-1 text-xs"></i>
-                                        <span>${item}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                        <div class="space-y-3 bg-white p-5 rounded-xl border border-slate-150">
-                            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400">Instrumen Kelengkapan Kerja:</h5>
-                            <ul class="space-y-2 text-sm text-slate-600">
-                                ${data.instruments.map(inst => `
-                                    <li class="flex items-center gap-2">
-                                        <i class="fa-regular fa-file-lines text-brand-500 text-base"></i>
-                                        <span class="font-medium">${inst}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Calculator Simulation Process
-        function calculateSimulation() {
-            const kategori = document.getElementById('simKategori').value;
-            const riwayat = document.querySelector('input[name="simRiwayat"]:checked').value;
-            const kondisi = document.getElementById('simKondisi').value;
-
-            let aktor = "";
-            let sanksiList = [];
-
-            // Logical matrix evaluation
-            if (riwayat === "1") {
-                if (kategori === "ringan_akademis") {
-                    aktor = "Guru Mata Pelajaran";
-                    sanksiList = [
-                        "Berikan teguran lisan secara privat.",
-                        "Berikan nasihat singkat dan edukatif di dalam kelas.",
-                        "Catat pelanggaran di lembar buku sikap mandiri Anda."
-                    ];
-                } else if (kategori === "kehadiran") {
-                    aktor = "Guru Piket & Guru Mapel Jam Pertama";
-                    sanksiList = [
-                        "Siswa terlambat diarahkan mengikuti program penegakkan pembiasaan (Salam Sapa / Refleksi Pagi).",
-                        "Siswa tetap diizinkan mengikuti pelajaran setelah pencatatan digital selesai.",
-                        "Sistem mengirimkan rekap keterlambatan ke portal Wali Kelas."
-                    ];
-                } else if (kategori === "atribut_seragam") {
-                    aktor = "Guru Piket & Guru Mapel";
-                    sanksiList = [
-                        "Menegur dan meminta siswa merapikan kembali atributnya saat itu juga (misal: mengikat rambut, melepas aksesoris non-standar).",
-                        "Melakukan penahanan sementara untuk aksesoris yang dilarang."
-                    ];
-                } else { // etika_moral
-                    aktor = "Wali Kelas & Guru BK";
-                    sanksiList = [
-                        "Segera panggil siswa di ruang konseling khusus secara privat.",
-                        "Lakukan pemeriksaan mendalam atas motif tindakan etika/moral.",
-                        "Lakukan pelaporan formal ke database untuk dicermati perkembangannya."
-                    ];
-                }
-            } else if (riwayat === "2") {
-                if (kategori === "ringan_akademis" || kategori === "atribut_seragam") {
-                    aktor = "Wali Kelas";
-                    sanksiList = [
-                        "Wali Kelas memanggil siswa untuk konseling bimbingan tatap muka.",
-                        "Memberikan tugas perbaikan sikap yang mendidik (Restorative Justice) terkait kerapian/tugas.",
-                        "Wali kelas mengontak orang tua sebagai bentuk koordinasi awal penanganan terpadu."
-                    ];
-                } else if (kategori === "kehadiran") {
-                    aktor = "Wali Kelas & Guru Piket";
-                    sanksiList = [
-                        "Wali kelas melakukan konseling individual mengenai kendala bangun pagi/manajemen waktu siswa.",
-                        "Orang tua dihubungi untuk memantau kesiapan keberangkatan siswa dari rumah."
-                    ];
-                } else {
-                    aktor = "Wali Kelas & Tim Tatib";
-                    sanksiList = [
-                        "Mengadakan pertemuan internal wali kelas, orang tua, siswa, dan perwakilan BK.",
-                        "Membuat surat pernyataan resmi perbaikan sikap bermeterai.",
-                        "Mendalami aspek emosional atau kendala psikologis penyebab resistensi anak."
-                    ];
-                }
-            } else { // riwayat >= 3 (Kasus Kronis)
-                aktor = "Tim Tatib, Guru BK & Manajemen Sekolah";
-                sanksiList = [
-                    "Melaksanakan tindakan sanksi administratif formal berjenjang (SP 1 / SP 2).",
-                    "Pemberian konsekuensi pembinaan khusus (seperti skorsing akademis bersyarat dengan penugasan terstruktur dari rumah).",
-                    "Pelaksanaan mediasi tingkat tinggi bersama Kepala Sekolah dan Orang Tua Murid.",
-                    "Pertimbangan penyerahan siswa ke pembinaan mandiri keluarga secara total jika tidak menunjukkan perbaikan komitmen sama sekali."
-                ];
-            }
-
-            // Adjustment based on conditions
-            if (kondisi === "ngeyel" && riwayat !== "3") {
-                sanksiList.push("<strong class='text-yellow-400'>Catatan Khusus:</strong> Dikarenakan siswa cenderung membela diri, libatkan Wali Kelas untuk mendampingi agar perdebatan yang menguras emosi tidak mengganggu KBM kelas.");
-            } else if (kondisi === "keluarga") {
-                sanksiList.push("<strong class='text-emerald-400'>Pendekatan Restoratif:</strong> Koordinasikan intensif dengan orang tua. Fokus pada sinkronisasi aturan rumah dengan aturan sekolah.");
-            } else if (kondisi === "emosi") {
-                sanksiList.push("<strong class='text-purple-400'>Rujukan BK:</strong> Pelanggaran dicurigai akibat kebutuhan pencarian atensi. Rujuk anak ke Guru BK untuk pembimbingan psikologis emosi.");
-            }
-
-            // Render Output Simulator
-            document.getElementById('simOutputAktor').innerHTML = aktor;
-            const tindakanUl = document.getElementById('simOutputTindakan');
-            tindakanUl.innerHTML = sanksiList.map(s => `<li>${s}</li>`).join('');
-        }
-
-        // Digital Signature Simulator
-        function signCommitment() {
-            const name = document.getElementById('signerName').value.trim();
-            const role = document.getElementById('signerRole').value;
-
-            if (name === "") {
-                showCustomAlert("Silakan isi nama Anda terlebih dahulu sebelum menandatangani.", "bg-amber-50", "border-amber-200", "text-amber-800", "fa-triangle-exclamation", "text-amber-500");
-                return;
-            }
-
-            // Add signature node
-            const container = document.getElementById('signerContainer');
-            const newSpan = document.createElement('span');
-            newSpan.className = "bg-brand-50 border border-brand-100 text-brand-700 text-xs px-3 py-1.5 rounded-full font-medium transition animate-pulse";
-            newSpan.innerHTML = `<i class="fa-solid fa-signature mr-1 text-slate-400"></i> ${name} (${role})`;
-            
-            container.appendChild(newSpan);
-
-            // Clear input form
-            document.getElementById('signerName').value = "";
-
-            // Show success alert
-            showCustomAlert(`Terima kasih Bapak/Ibu ${name}. Komitmen digital Anda berhasil disimpan untuk gerakan Satu Suara!`, "bg-emerald-50", "border-emerald-200", "text-emerald-800", "fa-circle-check", "text-emerald-500");
-        }
-
-        // Helper functions for alerts
-        function showCustomAlert(msg, bgClass, borderClass, textClass, icon, iconColor) {
-            const alertBox = document.getElementById('alertBox');
-            alertBox.className = `max-w-md mx-auto p-4 ${bgClass} ${borderClass} ${textClass} rounded-xl flex items-center justify-between text-xs transition duration-300`;
-            
-            alertBox.innerHTML = `
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid ${icon} ${iconColor} text-base"></i>
-                    <span>${msg}</span>
-                </div>
-                <button onclick="closeAlert()" class="text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark"></i></button>
-            `;
-            alertBox.classList.remove('hidden');
-        }
-
-        // Close Alert
-        function closeAlert() {
-            document.getElementById('alertBox').classList.add('hidden');
-        }
-    </script>
 </body>
 </html>
